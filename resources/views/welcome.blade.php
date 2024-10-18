@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,26 +14,31 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             {{-- <img src="img/download.png" alt=""> --}}
             {{-- <img src="{{ asset('/img/123.svg') }}" alt="Descrição da Imagem"> --}}
-            <div class="head">
+            {{-- <div class="head">
                 <a class="navbar-brand" href="{{ url('/') }}">Igreja de Cristo Unida Em Mocambique </a>
                 <span style="color: white">Ex-Missao American Board</span>
-            </div>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            </div> --}}
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('membros.index') }}">Membros</a>
+                        <a class="nav-link" href="{{ route('membros.index') }}">Dashbord</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('membros.create') }}">Novo Membro</a>
+                        <a class="nav-link" href="{{ route('membros.create') }}">Gestao Membro</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('financial.index') }}">Gestao Financeira</a>
                     </li>
                 </ul>
             </div>
@@ -58,4 +64,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
